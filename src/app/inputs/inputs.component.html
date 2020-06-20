@@ -1,0 +1,9 @@
+<input
+  *ngIf="tobeaffected !== ''; else default"
+  (keyup)="doTheThing($event)"
+  [(ngModel)]="tobeaffected"
+/>
+<ng-template #default>
+  <input (keyup)="doTheThing($event)" [value]="" />
+</ng-template>
+<br />
